@@ -2,7 +2,7 @@
 
 namespace MathGame.Models;
 
-internal class Game
+internal class MiniGame
 {
     public DateTime Date { get; set; }
     public int Score { get; set; }
