@@ -2,9 +2,8 @@
 
 internal class Question
 {
-    public required int FirstNumber { get; set; }
-    public required int SecondNumber { get; set; }
-    public required string OperationSymbol { get; set; }
-    public required int CorrectAnswer { get; set; }
-
+        public int FirstNumber { get; set; }
+        public int SecondNumber { get; set; }
+        public string OperationSymbol { get; set; }
+        public int CorrectAnswer { get; set; }
 }

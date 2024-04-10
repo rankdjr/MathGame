@@ -1,11 +1,10 @@
-﻿using System.Security.AccessControl;
-
-namespace MathGame.Models;
+﻿namespace MathGame.Models;
 
 internal class MiniGame
 {
     public DateTime Date { get; set; }
     public int Score { get; set; }
-    public GameType GameType { get; set; } 
-    public DifficultyLevel DifficultyLevel { get; set; }
+    public GameType gameType { get; set; }
+    public QuestionType questionType { get; set; }
+    public DifficultyLevel difficultyLevel { get; set; }
 }

@@ -1,20 +1,17 @@
 ﻿namespace MathGame.Models;
 
-internal enum GameState
+internal enum QuestionType
 {
-    MainMenu,
-    GameHistory,
-    QuestionTypeSelection,
-    Settings,
-    Standard,
-    Survival,
-    QuitGame
+    Addition,
+    Subtraction,
+    Multiplication,
+    Division
 }
 
 internal enum GameType
 {
     Standard,
-    Survival,
+    Survival
 }
 
 internal enum DifficultyLevel
@@ -22,14 +19,5 @@ internal enum DifficultyLevel
     Easy,
     Medium,
     Hard,
-    Insane,
+    Insane
 }
-
-internal enum QuestionType
-{
-    Addition,
-    Subtraction,
-    Multiplication,
-    Division,
-}
-

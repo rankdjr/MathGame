@@ -1,13 +1,10 @@
-﻿using MathGame.GameLogic;
-
-namespace MathGame;
+﻿using MathGame;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Game game = new Game();
-        game.Run();
+        GameInstance gameInstance = new GameInstance();
+        gameInstance.Run();
     }
-    
 }
