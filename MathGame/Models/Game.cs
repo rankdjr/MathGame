@@ -6,6 +6,6 @@ internal class Game
 {
     public DateTime Date { get; set; }
     public int Score { get; set; }
-    public GameType GameType { get; set; } // This already exists and fits perfectly
-    public DifficultyLevel DifficultyLevel { get; set; } // Continue using this to dictate the difficulty across the game
+    public GameType GameType { get; set; } 
+    public DifficultyLevel DifficultyLevel { get; set; }
 }
