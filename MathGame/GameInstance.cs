@@ -9,11 +9,10 @@ internal class GameInstance
     internal static List<MiniGame> gameHistory = new List<MiniGame>();
     internal void Run()
     {
-        bool quitGame = false;
         string userInput;
         MiniGame gameResult;
 
-        while (!quitGame)
+        while (true)
         {
             Console.Clear();
             Menu.PrintMainMenu();
@@ -46,8 +45,7 @@ internal class GameInstance
                     Menu.PrintGameHistoryMenu(gameHistory);
                     break;
                 case "q":
-                    Console.WriteLine("Thanks for playing!");
-                    quitGame = true;
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Invalid Input");

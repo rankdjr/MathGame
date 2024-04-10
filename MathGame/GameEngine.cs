@@ -7,8 +7,8 @@ internal partial class GameEngine
 {
     private const int GameLength = 5;
     private const int FinalScoreMultiplier = 10;
-
     Helpers util = new();
+
     private (int LowerBound, int UpperBound) GetNumberBounds(QuestionType questionType, DifficultyLevel difficultyLevel)
     {
         int lowerBound = 1;
