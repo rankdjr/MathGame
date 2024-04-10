@@ -13,3 +13,11 @@ internal enum DifficultyLevel
     Insane
 }
 
+internal enum QuestionType
+{
+    Addition,
+    Subtraction,
+    Multiplication,
+    Division
+}
+
