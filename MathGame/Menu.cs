@@ -9,59 +9,73 @@ namespace MathGame;
 
 internal static class Menu
 {
+    internal static void PrintHeader()
+    {
+        Console.WriteLine("=====================================================================================================");
+        Console.WriteLine(@"
+        ███╗   ███╗ █████╗ ████████╗██╗  ██╗     ██████╗ ██╗   ██╗███████╗███████╗████████╗
+        ████╗ ████║██╔══██╗╚══██╔══╝██║  ██║    ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
+        ██╔████╔██║███████║   ██║   ███████║    ██║   ██║██║   ██║█████╗  ███████╗   ██║   
+        ██║╚██╔╝██║██╔══██║   ██║   ██╔══██║    ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║   
+        ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║    ╚██████╔╝╚██████╔╝███████╗███████║   ██║   
+        ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝     ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   
+");
+        Console.WriteLine("=====================================================================================================");
+    }
     internal static void PrintMainMenu()
     {
-        string menuTitle = "MATH GAME CENTER";
+
         Console.Clear();
-        Console.WriteLine("==================================================================");
-        Console.WriteLine($"                        {menuTitle}                         ");
-        Console.WriteLine("==================================================================");
-        Console.Write(@$" Quiz your knowledge with one of the options below:
-                A - {QuestionType.Addition}
-                S - {QuestionType.Subtraction}
-                M - {QuestionType.Multiplication}
-                D - {QuestionType.Division}
-                E - Endless Survival
-                V - View Previous Games
-                Q - Quit the program
-                ");
+        PrintHeader();
+        Console.Write(@$"                   
+                        Quiz your knowledge with one of the options below:
+                                    
+                                    A - {QuestionType.Addition}
+                                    S - {QuestionType.Subtraction}
+                                    M - {QuestionType.Multiplication}
+                                    D - {QuestionType.Division}
+                                    E - Endless Survival
+                                    V - View Previous Games
+                                    Q - Quit the program
+        ");
         Console.WriteLine();
-        Console.WriteLine("==================================================================\n");
+        Console.WriteLine("=====================================================================================================\n");
     }
 
     internal static void PrintDifficultySelectionMenu()
     {
         string menuTitle = "Select Difficulty";
         Console.Clear();
-        Console.WriteLine("==================================================================");
-        Console.WriteLine($"                        {menuTitle}                         ");
-        Console.WriteLine("==================================================================");
-        Console.Write(@$" Select difficulty level:
-                E - {DifficultyLevel.Easy}
-                M - {DifficultyLevel.Medium}
-                H - {DifficultyLevel.Hard}
-                I - {DifficultyLevel.Insane}
-                ");
+        PrintHeader();
+        Console.WriteLine($"                                              {menuTitle}                                           ");
+        Console.WriteLine("=====================================================================================================");
+        Console.Write(@$"                   
+                                    
+                                                E - {DifficultyLevel.Easy}
+                                                M - {DifficultyLevel.Medium}
+                                                H - {DifficultyLevel.Hard}
+                                                I - {DifficultyLevel.Insane}
+        ");
         Console.WriteLine();
-        Console.WriteLine("==================================================================\n");
+        Console.WriteLine("=====================================================================================================\n");
     }
 
     internal static void PrintInnerGameMenu(string title)
     {
         string menuTitle = title;
         Console.Clear();
-        Console.WriteLine("==================================================================");
-        Console.WriteLine($"                        {menuTitle}                         ");
-        Console.WriteLine("==================================================================");
+        PrintHeader();
+        Console.WriteLine($"                                              {menuTitle}                                           ");
+        Console.WriteLine("=====================================================================================================");
         Console.WriteLine();
     }
     internal static void PrintGameHistoryMenu(List<MiniGame> gameHistory)
     {
         string menuTitle = "GAME HISTORY";
         Console.Clear();
-        Console.WriteLine("===========================================================================================================");
-        Console.WriteLine($"                                               {menuTitle}                                                ");
-        Console.WriteLine("===========================================================================================================");
+        PrintHeader();
+        Console.WriteLine($"                                              {menuTitle}                                           ");
+        Console.WriteLine("=====================================================================================================");
         foreach (var game in gameHistory)
         {
             string gameType = game.gameType is GameType.Survival ? game.gameType.ToString() : game.questionType.ToString();
@@ -69,7 +83,7 @@ internal static class Menu
             Console.WriteLine($"TimeStamp: {date}     \tGame: {gameType}    \tScore: {game.Score}   \t Difficulty: {game.difficultyLevel}");
         }
         Console.WriteLine();
-        Console.WriteLine("===========================================================================================================\n");
+        Console.WriteLine("=====================================================================================================\n");
         Console.WriteLine($"Press any key to return to the main menu");
         Console.ReadKey();
     }
